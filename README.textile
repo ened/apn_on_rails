@@ -203,6 +203,16 @@ h2. Example (assuming you have created an app and stored your keys on it):
   >> notification.save
 </pre></code>
 
+h3. Using custom hashes for the alert block
+
+In the above example, it's also possible to replace the static alert text with a hash as outlined in the Apple documentation:
+
+<pre><code>
+  >> notification.alert = { 'loc-key' => 'LocalizedString.Key' }.to_json
+</pre></code>
+
+h2. Delivery
+
 You can use the following Rake task to deliver your individual notifications:
 
 <pre><code>
